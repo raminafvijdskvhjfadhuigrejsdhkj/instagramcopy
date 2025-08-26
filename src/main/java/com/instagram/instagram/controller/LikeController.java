@@ -1,10 +1,11 @@
-package controller;
+package com.instagram.instagram.controller;
 
 import com.instagram.instagram.model.Like;
 import com.instagram.instagram.repository.LikeRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
 
 
 @RestController
@@ -14,7 +15,7 @@ public class LikeController {
     private final LikeRepository likeRepository;
 
     public LikeController(LikeRepository likeRepository){
-        this.LikeRepository likeRepository;
+        this.likeRepository = likeRepository;
     }
 
     @GetMapping
@@ -29,8 +30,10 @@ public class LikeController {
 
 
     @DeleteMapping("/{id}")
-    public void deleteLike(@PathVariable Long id)
+    public void deleteLike(@PathVariable Long id){
         likeRepository.deleteById(id);
+    }
+
 
 
 }

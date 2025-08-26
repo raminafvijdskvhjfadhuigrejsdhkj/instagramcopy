@@ -1,4 +1,4 @@
-package model;
+package com.instagram.instagram.model;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -13,7 +13,7 @@ public class Post {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long;
+    private Long id;
 
     private String caption;
     private String imageUrl;
@@ -27,3 +27,4 @@ public class Post {
     private Like like;
 
 }
+

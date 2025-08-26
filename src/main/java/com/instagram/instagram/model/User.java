@@ -1,30 +1,19 @@
-package model;
+package com.instagram.instagram.model;
 import jakarta.persistence.*;
 import lombok.*;
+
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-
-
-public class Like {
-
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User User;
-
-    @ManyToOne
-    @joinColumn( name = "post_id")
-    private Post post;
-
+    private String username;
+    private String email;
+    private String password;
 
 }
-
-
-
-

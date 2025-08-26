@@ -1,9 +1,11 @@
-package controller;
+package com.instagram.instagram.controller;
 import com.instagram.instagram.model.Post;
 import com.instagram.instagram.repository.PostRepository;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+
+
 
 @RestController
 @RequestMapping("/posts")
